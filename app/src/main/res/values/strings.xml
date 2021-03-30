@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">howtostudykorean (unofficial)</string>
+
+    <string name="successful_guess">Success!</string>
+    <string name="skip_guess">Skipping…</string>
+    <string name="incorrect_guess">Incorrect :(</string>
+    <string name="finished_guessing">Finished!</string>
+    <string name="start_quiz">Start</string>
+    <string name="loading">Loading…</string>
+    <string name="burger">☰</string>
+    <string name="back">☰</string>
+    <string name="page_download_fail">Failed to download page, and it wasn\'t cached</string>
+
+    <string name="about">About</string>
+    <string name="about_body">This app uses resources from www.howtostudykorean.com (please go there and use it!).
+        \n\nIt is based on the existing listening practice available there (https://www.howtostudykorean.com/unit-1-listening-practice/lesson-1) but enhances it to make it more user friendly.
+        \n\nAdditionally it automatically extracts all audio and text from each lesson so that it is always up to date with changes.
+    </string>
+    <string name="about_license">Show licenses</string>
+
+    <string name="lesson1">Lesson 1</string>
+    <string name="lesson2">Lesson 2</string>
+    <string name="lesson3">Lesson 3</string>
+    <string name="lesson4">Lesson 4</string>
+    <string name="lesson5">Lesson 5</string>
+    <string name="lesson6">Lesson 6</string>
+    <string name="lesson7">Lesson 7</string>
+    <string name="lesson8">Lesson 8</string>
+    <string name="lesson9">Lesson 9</string>
+    <string name="lesson10">Lesson 10</string>
+    <string name="lesson11">Lesson 11</string>
+    <string name="lesson12">Lesson 12</string>
+    <string name="lesson13">Lesson 13</string>
+    <string name="lesson14">Lesson 14</string>
+    <string name="lesson15">Lesson 15</string>
+    <string name="lesson16">Lesson 16</string>
+    <string name="lesson17">Lesson 17</string>
+    <string name="lesson18">Lesson 18</string>
+    <string name="lesson19">Lesson 19</string>
+    <string name="lesson20">Lesson 20</string>
+    <string name="lesson21">Lesson 21</string>
+    <string name="lesson22">Lesson 22</string>
+    <string name="lesson23">Lesson 23</string>
+    <string name="lesson24">Lesson 24</string>
+    <string name="lesson25">Lesson 25</string>
+</resources>

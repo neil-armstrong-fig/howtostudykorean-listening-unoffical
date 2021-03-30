@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/lesson_1"
+            android:title="@string/lesson1"/>
+
+        <item
+            android:id="@+id/lesson_2"
+            android:title="@string/lesson2"/>
+
+        <item
+            android:id="@+id/lesson_3"
+            android:title="@string/lesson3"/>
+
+        <item
+            android:id="@+id/lesson_4"
+            android:title="@string/lesson4"/>
+
+        <item
+            android:id="@+id/lesson_5"
+            android:title="@string/lesson5"/>
+
+        <item
+            android:id="@+id/lesson_6"
+            android:title="@string/lesson6"/>
+
+        <item
+            android:id="@+id/lesson_7"
+            android:title="@string/lesson7"/>
+
+        <item
+            android:id="@+id/lesson_8"
+            android:title="@string/lesson8"/>
+
+        <item
+            android:id="@+id/lesson_9"
+            android:title="@string/lesson9"/>
+
+        <item
+            android:id="@+id/lesson_10"
+            android:title="@string/lesson10"/>
+
+        <item
+            android:id="@+id/lesson_11"
+            android:title="@string/lesson11"/>
+
+        <item
+            android:id="@+id/lesson_12"
+            android:title="@string/lesson12"/>
+
+        <item
+            android:id="@+id/lesson_13"
+            android:title="@string/lesson13"/>
+
+        <item
+            android:id="@+id/lesson_14"
+            android:title="@string/lesson14"/>
+
+        <item
+            android:id="@+id/lesson_15"
+            android:title="@string/lesson15"/>
+
+        <item
+            android:id="@+id/lesson_16"
+            android:title="@string/lesson16"/>
+
+        <item
+            android:id="@+id/lesson_17"
+            android:title="@string/lesson17"/>
+
+        <item
+            android:id="@+id/lesson_18"
+            android:title="@string/lesson18"/>
+
+        <item
+            android:id="@+id/lesson_19"
+            android:title="@string/lesson19"/>
+
+        <item
+            android:id="@+id/lesson_20"
+            android:title="@string/lesson20"/>
+
+        <item
+            android:id="@+id/lesson_21"
+            android:title="@string/lesson21"/>
+
+        <item
+            android:id="@+id/lesson_22"
+            android:title="@string/lesson22"/>
+
+        <item
+            android:id="@+id/lesson_23"
+            android:title="@string/lesson23"/>
+
+        <item
+            android:id="@+id/lesson_24"
+            android:title="@string/lesson24"/>
+
+        <item
+            android:id="@+id/lesson_25"
+            android:title="@string/lesson25"/>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/about"
+            android:title="@string/about"/>
+    </group>
+</menu>

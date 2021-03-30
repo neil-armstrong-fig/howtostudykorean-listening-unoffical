@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.howtostudykorean.R" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="com.howtostudykorean.views.main.MainViewModel" />
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/nav_burger"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:gravity="center_vertical|start"
+                    app:srcCompat="@drawable/ic_dehaze_black_24dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:gravity="end">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/app_name"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:visibility="@{vm.started ? View.GONE : View.VISIBLE}"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/ActionButton"
+                        android:onClick="@{() -> vm.restartQuiz()}"
+                        android:visibility="@{vm.started ? View.VISIBLE : View.GONE}"
+                        app:srcCompat="@drawable/ic_autorenew_black_24dp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/ActionButton"
+                        android:onClick="@{() -> vm.skip()}"
+                        android:visibility="@{vm.started ? View.VISIBLE : View.GONE}"
+                        app:srcCompat="@drawable/ic_clear_black_24dp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/ActionButton"
+                        android:onClick="@{() -> vm.playSelectedAudio()}"
+                        android:visibility="@{vm.started ? View.VISIBLE : View.GONE}"
+                        app:srcCompat="@drawable/ic_volume_up_black_24dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/loading"
+                android:visibility="@{vm.audioTracks.isEmpty() ? View.VISIBLE : View.GONE}" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:audioTracks="@{vm.audioTracks}"
+                    app:vm="@{vm}" />
+
+            </ScrollView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="0"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@={vm.guess}"
+                android:visibility="@{vm.started ? View.VISIBLE : View.GONE}"
+                app:autoSizeTextType="uniform"
+                app:hasFocus="@{vm.started}"
+                app:onEnterKeyPressed="@{() -> vm.submitGuess()}"
+                app:onKeyboardDone="@{() -> vm.submitGuess()}" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="0"
+                android:onClick="@{() -> vm.startQuiz()}"
+                android:text="@string/start_quiz"
+                android:visibility="@{vm.started ? View.GONE : View.VISIBLE}"
+                app:autoSizeTextType="uniform" />
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:menu="@menu/menu" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>
