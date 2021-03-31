@@ -7,6 +7,10 @@ Simple app to provide a much richer experience to the already existing listening
 - Test your listening skills by listening to the recorded Korean sentences, and then typing out what you hear
 - Records your progress so that you can start and stop practice when convenient
 
+## How it looks
+![screenshot1](https://user-images.githubusercontent.com/1590057/113071299-591ec500-91bc-11eb-9fb6-728a256107e9.png)
+![screenshot2](https://user-images.githubusercontent.com/1590057/113071302-5ae88880-91bc-11eb-95fa-595482a5fe2e.png)
+
 ## TODO
 - Use local cache so works offline
 - Get better icons
